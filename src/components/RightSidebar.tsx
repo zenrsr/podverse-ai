@@ -1,5 +1,6 @@
 "use client";
 import { SignedIn, UserButton, useUser } from "@clerk/nextjs";
+import { FaMicrophone } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -43,8 +44,8 @@ const RightSidebar = () => {
           </div>
         </Link>
       </SignedIn>
-      <section>
-        <Header title="Fans Like You" />
+      <section className="flex flex-col gap-4">
+        <Header title="Fans Likes this" />
         <Carousel fansLikeDetail={topPodcasters!} />
       </section>
       <section className="flex flex-col gap-8 pt-12">
@@ -68,12 +69,9 @@ const RightSidebar = () => {
                   {podcaster?.name}
                 </h2>
               </figure>
-              <div className="flex items-center justify-center gap-2">
-                <p className="text-12 font-normal flex items-center justify-center">
-                  {/* {podcaster?.totalPodcasts > 1
-                    ? `${podcaster?.totalPodcasts} podcasts`
-                    : `${podcaster?.totalPodcasts} podcast`} */}
-                  {`${podcaster?.totalPodcasts} podcast${podcaster?.totalPodcasts !== 1 ? "s" : ""}`}
+              <div className="flex items-center justify-center text-white-1">
+                <p className="text-12 font-normal flex items-center justify-center gap-2">
+                  {`${podcaster?.totalPodcasts}`} <FaMicrophone />
                 </p>
               </div>
             </div>

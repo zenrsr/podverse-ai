@@ -109,6 +109,14 @@ export const getTrendingPodcasts = query({
   }
 });
 
+export const getPopularPodcasts = query({
+  handler: async (ctx) => {
+    const podcast = await ctx.db.query("podcasts").collect();
+
+    return podcast.sort((a, b) => b.views - a.views).slice(0, 4);
+  }
+});
+
 // this query will get the podcast by the authorId.
 export const getPodcastByAuthorId = query({
   args: {

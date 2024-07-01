@@ -34,6 +34,7 @@ const PodcastDetails = ({
             width={24}
             height={24}
             alt="microphone"
+            className="object-cover"
           />
           <h2 className="text-16 font-bold text-white-1">{podcast?.views}</h2>
         </figure>
@@ -51,21 +52,23 @@ const PodcastDetails = ({
 
       <div className="flex flex-col gap-8">
         <div className="flex flex-col gap-4">
-          <h4 className="text-18 font-bold text-whiite-1">Transcription</h4>
+          <h4 className="text-18 font-bold text-white-1">Transcript</h4>
           <p className="text-16 font-medium text-white-1">
             {podcast?.voicePrompt}
           </p>
         </div>
       </div>
 
-      <div className="flex flex-col gap-8">
-        <div className="flex flex-col gap-4">
-          <h4 className="text-18 font-bold text-whiite-1">Thumbnail Prompt</h4>
-          <p className="text-16 font-medium text-white-1">
-            {podcast?.imagePrompt}
-          </p>
+      {podcast?.imagePrompt && (
+        <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-4">
+            <h4 className="text-18 font-bold text-white-1">Thumbnail Prompt</h4>
+            <p className="text-16 font-medium text-white-1">
+              {podcast?.imagePrompt}
+            </p>
+          </div>
         </div>
-      </div>
+      )}
 
       <section className="mt-8 flex flex-col gap-5">
         <h1 className="tetx-20 font-bold text-white-1">Similar Podcasts</h1>

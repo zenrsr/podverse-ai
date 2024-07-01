@@ -61,10 +61,10 @@ const PodcastDetailPlayer = ({
       <div className="flex flex-col gap-8 max-md:items-center md:flex-row">
         <Image
           src={imageUrl}
-          width={250}
+          width={320}
           height={250}
           alt="Podcast image"
-          className="aspect-square rounded-lg"
+          className="aspect-auto rounded-lg"
         />
         <div className="flex w-full flex-col gap-5 max-md:items-center md:gap-9">
           <article className="flex flex-col gap-2 max-md:items-center">
