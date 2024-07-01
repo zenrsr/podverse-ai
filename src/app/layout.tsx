@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import ConvexClientProvider from "../../providers/ConvexClerkProvider";
 import AudioProvider from "../../providers/AudioProvider";
@@ -23,7 +24,10 @@ export default function RootLayout({
     <ConvexClientProvider>
       <html lang="en">
         <AudioProvider>
-          <body className={`${manrope.className} `}>{children}</body>
+          <body className={`${manrope.className} `}>
+            {children}
+            <Analytics />
+          </body>
         </AudioProvider>
       </html>
     </ConvexClientProvider>
