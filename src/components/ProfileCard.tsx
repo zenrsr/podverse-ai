@@ -77,7 +77,7 @@ const ProfileCard = ({
         {podcastData?.podcasts.length > 0 && (
           <Button
             onClick={playRandomPodcast}
-            className="text-16 bg-orange-1 font-extrabold text-white-1"
+            className="text-16 bg-green-1 font-extrabold text-black-1"
           >
             <Image
               src="/icons/Play.svg"

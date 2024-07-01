@@ -110,13 +110,13 @@ const CreatePodcast = () => {
       toast({
         title: "Podcast created successfully!"
       });
+      console.log({ podcast });
       setIsSubmitting(false);
       router.push("/");
     } catch (error) {
       console.log(data);
       toast({
-        title: "Error submitting podcast!",
-        variant: "destructive"
+        title: "please wait while we submit the podcast!"
       });
       setIsSubmitting(false);
     }
@@ -141,7 +141,7 @@ const CreatePodcast = () => {
                   </FormLabel>
                   <FormControl>
                     <Input
-                      className="input-class focus-visible:ring-offset-orange-1"
+                      className="input-class focus-visible:ring-offset-green-1"
                       placeholder="Sage Minds; AI Conversations"
                       {...field}
                     />
@@ -158,7 +158,7 @@ const CreatePodcast = () => {
               <Select onValueChange={(value) => setVoiceType(value)}>
                 <SelectTrigger
                   className={cn(
-                    "text-16 w-full border-none bg-black-1 text-gray-1 focus-visible:ring-offset-orange-1"
+                    "text-16 w-full border-none bg-black-1 text-gray-1 focus-visible:ring-offset-green-1"
                   )}
                 >
                   <SelectValue
@@ -166,12 +166,12 @@ const CreatePodcast = () => {
                     className="placeholder:text-gray-1"
                   />
                 </SelectTrigger>
-                <SelectContent className="text-16 border-none bg-black-1 font-bold text-white-1 focus:ring-offset-orange-1">
+                <SelectContent className="text-16 border-none bg-black-1 font-bold text-white-1 focus:ring-offset-green-1">
                   {voiceCategories.map((voice) => (
                     <SelectItem
                       key={voice}
                       value={voice}
-                      className="capitalize focus:bg-orange-1"
+                      className="capitalize focus:bg-green-1"
                     >
                       {voice}
                     </SelectItem>
@@ -197,7 +197,7 @@ const CreatePodcast = () => {
                   </FormLabel>
                   <FormControl>
                     <Textarea
-                      className="input-class focus-visible:ring-offset-orange-1"
+                      className="input-class focus-visible:ring-offset-green-1"
                       placeholder="Write a brief description of your podcast."
                       {...field}
                     />
@@ -230,7 +230,7 @@ const CreatePodcast = () => {
             <div className="mt-10 w-full">
               <Button
                 type="submit"
-                className="text-16 w-full bg-orange-1 py-4 font-extrabold text-white-1 transition-all duration-500 hover:bg-black-1"
+                className="text-16 w-full bg-green-1 py-4 font-extrabold text-black-1 transition-all duration-500 hover:bg-black-1"
               >
                 {isSubmitting ? (
                   <>

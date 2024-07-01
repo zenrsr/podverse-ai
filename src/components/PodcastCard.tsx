@@ -16,15 +16,17 @@ const PodcastCard = ({
   };
 
   return (
-    <div className="cursor-pointer" onClick={handleViews}>
+    <div className="cursor-pointer group" onClick={handleViews}>
       <figure className="flex flex-col gap-2">
-        <Image
-          src={imgUrl}
-          width={174}
-          height={174}
-          alt={title}
-          className="aspect-square h-fit w-full rounded-xl 2xl:size-[200px]"
-        />
+        <div className=" overflow-hidden">
+          <Image
+            src={imgUrl}
+            width={174}
+            height={174}
+            alt={title}
+            className="aspect-square h-fit w-full rounded-xl 2xl:size-[200px] group-hover:scale-110 transtion-transform duration-300"
+          />
+        </div>
         <div className="flex flex-col">
           <h1 className="text-16 truncate font-bold text-white-1">{title}</h1>
           <h2 className="text-12 truncate font-normal capitalize text-white-4">

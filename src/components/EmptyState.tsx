@@ -29,17 +29,16 @@ const EmptyState = ({
         )}
 
         {buttonLink && (
-          <Button className="bg-orange-1">
+          <Button className="bg-green-1">
             <Link href={buttonLink} className="gap-1 flex">
               <Image
                 src="/icons/discover.svg"
                 width={20}
                 height={20}
                 alt="discover"
+                className=""
               />
-              <h1 className="text-16 font-extrabold text-white-1">
-                {buttonText}
-              </h1>
+              <h1 className="text-16 font-bold text-black-1">{buttonText}</h1>
             </Link>
           </Button>
         )}

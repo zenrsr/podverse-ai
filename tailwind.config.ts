@@ -20,7 +20,7 @@ const config = {
     extend: {
       colors: {
         white: {
-          1: "#FFFFFF",
+          1: "#EEF7FF",
           2: "rgba(255, 255, 255, 0.72)",
           3: "rgba(255, 255, 255, 0.4)",
           4: "rgba(255, 255, 255, 0.64)",
@@ -34,8 +34,8 @@ const config = {
           5: "#2E3036",
           6: "#24272C"
         },
-        orange: {
-          1: "#F97535"
+        green: {
+          1: "#1db954"
         },
         gray: {
           1: "#71788B"

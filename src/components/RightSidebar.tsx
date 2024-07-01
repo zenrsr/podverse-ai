@@ -30,7 +30,7 @@ const RightSidebar = () => {
         <Link href={`/profile/${user?.id}`} className="flex gap-3 pb-12 group">
           <UserButton />
           <div className="flex w-full items-center justify-between">
-            <h1 className="text-16 truncate text-white-1 font-semibold">
+            <h1 className="text-18 truncate text-white-1 font-semibold items-center">
               {user?.fullName}
             </h1>
             <Image
@@ -38,7 +38,7 @@ const RightSidebar = () => {
               alt="arrow"
               width={24}
               height={24}
-              className="group-hover:translate-x-1 transition-all duration-150"
+              className="group-hover:translate-x-1 transition-all duration-150 "
             />
           </div>
         </Link>
